@@ -16,7 +16,7 @@ npm install vuepress-plugin-robotstxt
 
 module.exports = {
   plugins: {
-    'robotstxt': {
+    'robots': {
         /**
          * @disallowAll
          * Optional: if it's true, all others options are ignored and exclude all robots from the entire server
