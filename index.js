@@ -8,7 +8,7 @@ module.exports = (options, ctx) => {
         allowAll = false,           // Allow All: false by default
         disallowAll = false,        // Disallow all: false by default
         host,                       // Base URL
-        sitemap = 'sitemap.xml',    // Default sitemap is sitemap.xml
+        sitemap = '//sitemap.xml',    // Default sitemap is sitemap.xml
         policies,            // Default policies is null
         outputFile = 'robots.txt'   // Default robots is robots.txt
     } = options;
@@ -18,8 +18,6 @@ module.exports = (options, ctx) => {
             console.log('Generating robots.txt ...');
 
             if(ctx.isProd === true){
-                let robotsTxtData = {}
-
                 const robotsTxt = path.resolve(
                     ctx.outDir, outputFile
                 );
@@ -55,11 +53,12 @@ module.exports = (options, ctx) => {
                     }
                 }
 
+                const sitemapUrl = host + sitemap;
+
                 robotstxt({
-                    policy: policyArray, sitemap: sitemap, host: host
+                    policy: policyArray, sitemap: sitemapUrl.replace(/\/\//g,"/"), host: host
                 }).then(content => {
                     // All good, save the file
-                    console.log(content)
                     fs.writeFileSync(robotsTxt, content)
                     return content;
                 }).catch(error => {

@@ -18,6 +18,11 @@ module.exports = {
   plugins: {
     'robots': {
         /**
+         * @host
+         * Mandaroty, You have to provide the host URL
+         */   
+        host: "https://your-website",
+        /**
          * @disallowAll
          * Optional: if it's true, all others options are ignored and exclude all robots from the entire server
          */
@@ -32,11 +37,6 @@ module.exports = {
          * Optional, by default: sitemap.xml
          */ 
         sitemap: "/sitemap.xml",
-        /**
-         * @host
-         * Optional, by default: null
-         */   
-        host: "https://your-website",
         /**
          * @policies
          * Optional, by default: null
