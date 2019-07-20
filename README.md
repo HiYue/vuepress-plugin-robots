@@ -11,6 +11,9 @@ npm install vuepress-plugin-robots
 > NOT SUPPORT
 
 ### Vuepress v1.x
+
+Put your options in .vuepress/config.js file, **please note: host option is mandatory**.
+
 ```javascript
 // .vuepress/config.js
 
