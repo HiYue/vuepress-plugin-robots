@@ -3,7 +3,7 @@
 ## Install
 * NPM
 ```bash
-npm install vuepress-plugin-robotstxt
+npm install vuepress-plugin-robots
 ```
 
 ## Usage
