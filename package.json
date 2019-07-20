@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-robotstxt",
+  "name": "vuepress-plugin-robots",
   "version": "1.0.0",
   "description": "Robots.txt file generator plugin for vuepress",
   "main": "index.js",
