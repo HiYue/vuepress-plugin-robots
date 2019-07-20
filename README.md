@@ -19,7 +19,7 @@ module.exports = {
     'robots': {
         /**
          * @host
-         * Mandaroty, You have to provide the host URL
+         * Mandatory, You have to provide the host URL
          */   
         host: "https://your-website",
         /**
