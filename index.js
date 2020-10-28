@@ -53,10 +53,8 @@ module.exports = (options, ctx) => {
                     }
                 }
 
-                const sitemapUrl = host + sitemap;
-
                 robotstxt({
-                    policy: policyArray, sitemap: sitemapUrl, host: host
+                    policy: policyArray, sitemap: host + sitemap.replace(/\/\//g,"/"), host: host
                 }).then(content => {
                     // All good, save the file
                     fs.writeFileSync(robotsTxt, content)
